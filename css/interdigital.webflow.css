@@ -1,3 +1,12 @@
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
 .text-block {
   font-family: Inter, sans-serif;
 }
@@ -28,8 +37,14 @@
   white-space: normal;
 }
 
-.body {
-  background-color: #fff;
+.content {
+  background-color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
 }
 
 .container {
