@@ -493,7 +493,7 @@
 }
 
 .body-2 {
-  background-color: #e7dada;
+  background-color: #818181;
 }
 
 .div-block-8 {
@@ -904,6 +904,14 @@
 
 .home-section-spacer {
   min-height: 30vh;
+}
+
+.body-3 {
+  background-color: #818181;
+}
+
+.body-4 {
+  background-color: #818181;
 }
 
 @media screen and (max-width: 991px) {
