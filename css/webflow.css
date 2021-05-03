@@ -1629,6 +1629,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
+  background:black;
   text-align: center;
   overflow: visible;
   min-width: 200px;
