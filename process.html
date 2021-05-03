@@ -394,19 +394,7 @@
         texture.minFilter = THREE.NearestFilter;
 
         const parameters = { map: texture, emissiveIntensity: 3.0 };
-        scene.getObjectByName("FutureTV", true).material = new THREE.MeshBasicMaterial( { map:  texture } );
         scene.getObjectByName("SonyTVScreen", true).material = new THREE.MeshLambertMaterial( { map:  texture } );
-
-        // Add iPhone Deep Fake Texture
-        deepFake = document.getElementById('TomCruise');
-        deepFake.play();
-
-        df_texture = new THREE.VideoTexture(deepFake);
-        df_texture.minFilter = THREE.NearestFilter;
-        let df_material = new THREE.MeshLambertMaterial( { map:  df_texture } );
-        scene.getObjectByName(`iphone_12015_1`, true).material = df_material
-        scene.getObjectByName(`iphone_12015_4`, true).material = df_material
-        scene.getObjectByName(`iphone_12015_5`, true).material = df_material
         
         // Add card textures
         for (let i = 0; i < 7; i++) {
@@ -437,8 +425,6 @@
         scene.getObjectByName('236obj04', true).material = cabinetMat;
         scene.getObjectByName('236obj02', true).material = cabinetMat;
         scene.getObjectByName('Mesh457', true).material = cabinetMat;
-
-        scene.getObjectByName(`Opportunity_DigitalDouble`, true).material = new THREE.MeshLambertMaterial({color: 0x08d9d6, opacity: 0.1, transparent: true});
     }
 
     let video, texture, deepFake, df_texture, material, mesh, box, composer, effectFXAA;

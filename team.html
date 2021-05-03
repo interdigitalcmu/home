@@ -249,59 +249,6 @@
         billboardText.repeat.set(-1, 1);
         scene.getObjectByName('About_Billboard', true).material = new THREE.MeshBasicMaterial({map: billboardText});
         scene.getObjectByName('About_Billboard', true).material.side = THREE.DoubleSide;
-
-        // Add TV Video Texture
-        video = document.getElementById( 'mainTV' );
-        video.play();
-
-        texture = new THREE.VideoTexture( video );
-        texture.minFilter = THREE.NearestFilter;
-
-        const parameters = { map: texture, emissiveIntensity: 3.0 };
-        scene.getObjectByName("FutureTV", true).material = new THREE.MeshBasicMaterial( { map:  texture } );
-        scene.getObjectByName("SonyTVScreen", true).material = new THREE.MeshLambertMaterial( { map:  texture } );
-
-        // Add iPhone Deep Fake Texture
-        deepFake = document.getElementById('TomCruise');
-        deepFake.play();
-
-        df_texture = new THREE.VideoTexture(deepFake);
-        df_texture.minFilter = THREE.NearestFilter;
-        let df_material = new THREE.MeshLambertMaterial( { map:  df_texture } );
-        scene.getObjectByName(`iphone_12015_1`, true).material = df_material
-        scene.getObjectByName(`iphone_12015_4`, true).material = df_material
-        scene.getObjectByName(`iphone_12015_5`, true).material = df_material
-        
-
-        // Add card textures
-        for (let i = 0; i < 7; i++) {
-            let texture = new THREE.TextureLoader().load(`Textures/Cards/Card_${i+1}.png`);
-            texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
-            texture.repeat.set(-1, 1);
-            scene.getObjectByName(`Card_${i+1}`, true).material = new THREE.MeshLambertMaterial( { map:  texture, emissiveIntensity: 0.1 } );
-        }
-
-        // Set couch material color
-        for (let i = 0; i < 12; i++) {
-            scene.getObjectByName(`Couch_${i+1}`, true).material.color.setHex(0x6A2E35);
-        }
-
-        // Set coffee table material color
-        scene.getObjectByName('CoffeeTableSurface', true).material = new THREE.MeshLambertMaterial({color: 0xDDA77B});
-        scene.getObjectByName('CoffeeTableLegs', true).material = new THREE.MeshLambertMaterial({color: 0x283845});
-        scene.getObjectByName('CoffeeTableSupports', true).material = new THREE.MeshLambertMaterial({color: 0x283845});
-
-        // Projector
-        scene.getObjectByName('Plane002', true).material = new THREE.MeshLambertMaterial({color: 0xDAD6D6});
-
-        // TV Stand Cabinets
-        let cabinetMat = new THREE.MeshLambertMaterial({color: 0xB6C2D9});
-        let surfaceMat = new THREE.MeshLambertMaterial({color: 0x171D1C})
-        scene.getObjectByName('236obj05', true).material = surfaceMat;
-        scene.getObjectByName('236obj04', true).material = cabinetMat;
-        scene.getObjectByName('236obj02', true).material = cabinetMat;
-        scene.getObjectByName('Mesh457', true).material = cabinetMat;
     }
 
     let video, texture, deepFake, df_texture, material, mesh, box, composer, effectFXAA;
