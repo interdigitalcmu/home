@@ -144,7 +144,7 @@
         gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,0.4)"}, delay: 2})
     })
 
-    let stats = new Stats();
+    // let stats = new Stats();
 
     const fov = 80;
     const aspect = 1.8;  // the canvas default
@@ -260,7 +260,7 @@
         composer.addPass( bloomPass );
         // composer.addPass(ssaoPass);
 
-        document.body.appendChild(stats.dom);
+        // document.body.appendChild(stats.dom);
         // document.body.addEventListener('keydown', keyPressed);
         document.body.addEventListener('resize', onWindowResize)
 
@@ -285,7 +285,7 @@
         camera.position.z = cameraPosition.z;
 
         camera.lookAt(lookAtObject.position);
-        stats.update();
+        // stats.update();
         TWEEN.update();
     }
 
