@@ -50,6 +50,17 @@ a {
   white-space: normal;
 }
 
+.quote {
+  text-align: center;
+  font-style: italic;
+  color:rgba(98, 124, 219, .8)
+}
+
+.quotable {
+  font-size: 5em;
+  color: rgb(52, 245, 197, 0.32);
+}
+
 .content {
   background-color: rgba(0, 0, 0, 1);
   position: absolute;
