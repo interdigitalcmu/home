@@ -991,7 +991,7 @@ textarea.w-select {
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
   margin: 0 3px 0.5em;
   transition: background-color 100ms, color 100ms;
@@ -1026,10 +1026,10 @@ textarea.w-select {
   -ms-user-select: none;
   user-select: none;
 }
-.w-slider-arrow-left [class^="w-icon-"],
-.w-slider-arrow-right [class^="w-icon-"],
-.w-slider-arrow-left [class*=" w-icon-"],
-.w-slider-arrow-right [class*=" w-icon-"] {
+.w-slider-arrow-left [class^='w-icon-'],
+.w-slider-arrow-right [class^='w-icon-'],
+.w-slider-arrow-left [class*=' w-icon-'],
+.w-slider-arrow-right [class*=' w-icon-'] {
   position: absolute;
 }
 .w-slider-arrow-left:focus,
@@ -1063,6 +1063,9 @@ textarea.w-select {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+.w-slider-force-show {
+  display: block !important;
 }
 .w-dropdown {
   display: inline-block;
@@ -1629,7 +1632,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background:black;
+  background: #C8C8C8;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1686,6 +1689,7 @@ textarea.w-select {
   outline: 0;
 }
 .w-nav-button.w--open {
+  background-color: #C8C8C8;
   color: white;
 }
 .w-nav[data-collapse="all"] .w-nav-menu {
