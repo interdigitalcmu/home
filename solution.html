@@ -39,7 +39,7 @@
           </nav>
         </div>
         <a href="team.html" class="navbar-link w-nav-link" data-index="4">team</a>
-        <a href="https://interdigitalatcmu.medium.com/" target="_blank" class="navbar-link w-nav-link">blog</a>
+        <a href="https://interdigitalatcmu.medium.com/" target="_blank" class="navbar-link w-nav-link" data-index="1">blog</a>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -466,12 +466,17 @@
 
     $('.navbar-link').on('click', function(e) {
       e.preventDefault();
-      SetCameraSpotlight($(this).data("index"));
-      if (!this.href.includes("#")) {
-        gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,1)"}, duration: 0.5})
-        setTimeout(() => {
-          window.location = this.href
-        }, 1000);
+      if ($(this).data("index") !== undefined && $(this).data("index") !== null) {
+        SetCameraSpotlight($(this).data("index"));
+        if (!this.href.includes("#") && !this.href.includes('https://')) {
+          gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,1)"}, duration: 0.5})
+          setTimeout(() => {
+            window.location = this.href
+          }, 1000);
+        }
+        else {
+          window.open(this.href, '_blank');
+        }
       }
     })
 
