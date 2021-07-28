@@ -490,8 +490,7 @@
         e.preventDefault();
         if ($(this).data("index") !== undefined && $(this).data("index") !== null) {
           SetCameraSpotlight($(this).data("index"));
-          console.log(this.href);
-          if (!this.href.includes("#") && !this.href.includes('https://')) {
+          if (!this.href.includes("#") && !this.href.includes('interdigitalatcmu.medium.com')) {
             gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,1)"}, duration: 0.5})
             setTimeout(() => {
               window.location = this.href
