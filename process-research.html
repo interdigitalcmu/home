@@ -578,19 +578,19 @@
 			}, false );
 
     $('.navbar-link').on('click', function(e) {
-      e.preventDefault();
-      if ($(this).data("index") !== undefined && $(this).data("index") !== null) {
-        SetCameraSpotlight($(this).data("index"));
-        if (!this.href.includes("#") && !this.href.includes('https://')) {
-          gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,1)"}, duration: 0.5})
-          setTimeout(() => {
-            window.location = this.href
-          }, 1000);
+        e.preventDefault();
+        if ($(this).data("index") !== undefined && $(this).data("index") !== null) {
+          SetCameraSpotlight($(this).data("index"));
+          if (!this.href.includes("#") && !this.href.includes('interdigitalatcmu.medium.com')) {
+            gsap.to(".content", {css: {backgroundColor: "rgba(0,0,0,1)"}, duration: 0.5})
+            setTimeout(() => {
+              window.location = this.href
+            }, 1000);
+          }
+          else {
+            window.open(this.href, '_blank');
+          }
         }
-        else {
-          window.open(this.href, '_blank');
-        }
-      }
     })
 
     $('.menuitem-link-2').on('click', function(e) {
